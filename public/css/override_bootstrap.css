@@ -1,0 +1,26 @@
+.navbar-default {
+	background-color: black;
+}
+.navbar-default .navbar-brand {
+	font-size: 20px;
+}
+.overlay {
+	padding-top: 30px;
+}
+.form-control {
+	padding: 8px, 20px;
+	width: 75%;
+	background-color: #FFFACD;
+	margin-bottom: 25px;
+	color: black;
+}
+.row {
+	margin-left: 20px;
+}
+.navbar-right {
+	padding-right: 90px;
+}
+.navbar-brand {
+	font-weight: bold;
+	font-size: 25px;
+}

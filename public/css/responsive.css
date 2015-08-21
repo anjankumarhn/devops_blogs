@@ -1,0 +1,42 @@
+@media (max-width:480px) {
+	.navbar-default .navbar-brand {
+		font-size: 11px;
+	}
+	.sign_in {
+		width: 285px;
+		margin-left: 10px;
+		padding-top: 5px;
+		padding-left: 60px;
+	}
+	.input-field {
+		width: 150px;
+		height: 25px;
+	}
+	.btn {
+		height: 25px
+	}
+	.btn_response {
+		margin-left: -92px;
+		margin-top: 5px;
+	}
+}
+
+@media (min-width: 481px) and (max-width:640px) {
+	.navbar-brand {
+		font-size: 11px;
+	}
+	.sign_in {
+		width: 285px;
+	}
+}
+
+@media (min-width: 641px) and (max-width:1024px) {
+	.sign_in {
+		width: 400px;
+		margin-left: 200px;
+	}
+	.btn_response {
+		margin-left: -92px;
+		margin-top: 5px;
+	}
+}

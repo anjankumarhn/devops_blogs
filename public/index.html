@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Devops | Qwinix</title>
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="Devops Qwinix" />
+<meta name="author" content="Anjan" />
+<meta name="keywords" content="Devops Qwinix" />
+
+<link rel="stylesheet" href="css/animate.min.css">
+<!-- bootstrap css -->
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- font-awesome -->
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<!-- google font -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700,800' rel='stylesheet' type='text/css'>
+
+<!-- custom css -->
+<link rel="stylesheet" href="css/templatemo-style.css">
+<link rel="stylesheet" href="css/override_bootstrap.css">
+<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+</head>
+<body>
+<div class="preloader">
+			<div class="sk-spinner sk-spinner-rotating-plane"></div>
+    	 </div>
+		<!-- end preloader -->
+		<!-- start navigation -->
+		<nav class="navbar navbar-inverse">
+		 <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Devops Blogs</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+        <li><a href="#git_setup">Git</a></li>
+        <li><a href="#ruby_setup">Ruby</a></li>
+        <li><a href="#rails_setup">Rails</a></li>
+        <li><a href="#postgres_setup">Postgres</a></li>
+        </ul>
+</nav>
+		<!-- end navigation -->
+
+		<!-- start home -->
+		<section id="home">
+			<div class="overlay">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-1"></div>
+						<div class="col-md-10 wow fadeIn" data-wow-delay="0.3s">
+							<h3 class="text-upper">The Steps to be followed for ROR stack on Centos.</h3>
+							<p class="tm-white">This blog contains Git, Ruby, Rails &amp; Postgres installation process on Centos 6.5 & 7. 
+					
+						</div>
+						<div class="col-md-1"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end home -->
+		<div class="row">
+		<div class="col-md-9">
+			<div class="blog-container">
+			<!--- Instance configuration -->
+				<!-- <div class="instanc_setup">
+					<h4>The Steps to be followed after create an instance</h4>
+					<p class="title">Please login to aws instance through your pem file.<p>
+					<input class="form-control" value="ssh -i “your pem file” root@ip">
+					<p class="title">edit your ssh configuration with the following.</p>
+					<input class="form-control" value="sudo vi /etc/ssh/ssd_config">
+					<p>Made the following changes.</p>
+					<p>PermitRootLogin yes <br>
+    					RSAAuthentication yes <br>
+    					PasswordAuthentication no <br>
+    					AuthorizedKeysFile     .ssh/authorized_keys <br>
+						</p>
+						<p class="title">Restart the ssh server.</p>
+						<input class="form-control" value=" /etc/init.d/sshd restart">
+						<p class="title">Create a group called admins.</p>
+						<input class="form-control" value="groupadd admins">
+						<p class="title">Create a deploy user under admins group.</p>
+						<input class="form-control" value="useradd -g admins -m deploy">
+						<p class="title">Make sure the deploy user is under group admins.</p>
+						<input class="form-control" value="vi /etc/group">
+						<p class="title">please verify by typing /admins <br>
+						admins:x:503:deploy</p>
+						<p class="title">Add admins group to sudoers file.</p>
+						<input class="form-control" value="echo -e ''%admins \tALL=(ALL)\tNOPASSWD:ALL'' >> /etc/sudoers">
+						<p class="title">Please verify by the sudo priviliges for admins group.</p>
+						<input class="form-control" value="cat /etc/sudoers">
+						<p>Please verify these lines <br>
+						%deploy ALL=(LLA) ALL <br>
+						%admins     ALL=(ALL)    NOPASSWD: ALL</p>
+						<p class="title">Create a common directory structure.</p>
+						<input class="form-control" value="mkdir -p /u01/apps/qwinix">
+						<p class="title">Please give a ownership for this folder structure to deploy user.</p>
+						<input class="form-control" value="chown -R deploy.deploy /u01/apps/qwinix">
+						<p class="title">Login as a deploy user and make sure path is /home/deploy.</p>
+						<input class="form-control" value="pwd">
+						<p class="title">Create .ssh directory</p>
+						<input class="form-control" value="mkdir .ssh & cd .ssh">
+						<p class="title">Create an authorized_keys file and add necessary users ssh keys.</p>
+						<input class="form-control" value="vi authorized_keys">
+						<p>Note: Press "i" to insert and press esc adn wq! to save.</p>
+						<p>Make sure admins has own the ssh path.<p>
+						<input class="form-control" value="chown -R deploy.admins /home/deploy/.ssh/">
+						<input class="form-control" value="chmod 700 /home/deploy/.ssh">
+						<input class="form-control" value="chmod 400 /home/deploy/.ssh/authorized_keys">
+				</div> -->
+				<!--- Git Installation -->
+				<div class="git_setup" id="git_setup">
+					<h4>Git:</h4>
+					<p class="title">Install the necessary packages for git.</p>
+					<input class="form-control" value="sudo yum -y install git openssh-client gcc openssl-devel make libcurl-devel gcc-c++" disabled>
+					<p class="title">To install git.</p>
+					<input class="form-control" value="sudo yum install git" disabled>
+					<div class="links">
+					<p class="title">Please refer the following links for more info.</p>
+					<a href="https://www.digitalocean.com/community/tutorials/how-to-install-git-on-centos-7">Git Installation on centos 7</a>
+					<br>
+					<a href="https://www.digitalocean.com/community/tutorials/how-to-install-git-on-a-centos-6-4-vps">Git Installation on centos 6.4</a>
+					</div>
+				</div>
+				<!--- Ruby Installation -->
+				<div class="ruby_setup" id="ruby_setup">
+				<h4>Ruby:</h4>
+				<input class="form-control" value="curl ­L https://raw.github.com/fesplugas/rbenv­installer/master/bin/rbenv­installer | bash" disabled>
+				<input class="form-control" value="export RBENV_ROOT=''${HOME}/.rbenv''" disabled>
+				<input class="form-control" value="export PATH=''${RBENV_ROOT}/bin:${PATH}''" disabled>
+				<input class="form-control" value="eval ''$(rbenv init ­)''" disabled>
+				<p class="title">Please install the following packages.</p>
+				<input class="form-control" value="sudo yum install -y git-core zlib zlib-devel gcc-c++ patch readline readline-devel libyaml-devel libffi-devel openssl-devel make bzip2 autoconf automake libtool bison curl sqlite-devel" disabled>
+				<p class="title">If any Multilib version problems found.</p>
+				<input class="form-control" value="sudo  yum downgrade libyaml" disabled>
+				<input class="form-control" value="sudo yum install libyaml-devel" disabled>
+				<p class="title">Clone the ruby repo from github.</p>
+				<input class="form-control" value="git clone git://github.com/sstephenson/rbenv.git .rbenv" disabled>
+				<input class="form-control" value="echo 'export PATH=''$HOME/.rbenv/bin:$PATH''' >> ~/.bash_profile" disabled>
+				<input class="form-control" value="echo 'eval ''$(rbenv init -)''' >> ~/.bash_profile" disabled>
+				<input class="form-control" value="echo 'eval ''$(rbenv init -)''' >> ~/.bash_profile" disabled>
+				<input class="form-control" value="git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build" disabled>
+				<input class="form-control" value=" echo 'export PATH=''$HOME/.rbenv/plugins/ruby-build/bin:$PATH''' >> ~/.bash_profile" disabled>
+				<input class="form-control" value=" exec $SHELL" disabled>
+				<input class="form-control" value="rbenv install -v 2.2.2" disabled>
+				<input class="form-control" value="rbenv global 2.2.2" disabled>
+				<input class="form-control" value=" ruby -v" disabled>
+				<div class="links">
+				<p class="title">Please refer the following links for more info.</p>
+				<a href="https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-centos-7">Ruby on Rails Installation on centos - Rbenv</a>
+				<br>
+				<a href="https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-on-centos-6-with-rvm">Ruby on Rails Installation on centos - RVM</a>
+				</div>
+				</div>
+				<!-- Rails Installation -->
+				<div class="rails_setup" id="rails_setup">
+					<h4>Rails:</h4>
+				<input class="form-control" value="gem install bundler --no-ri --no-rdoc" disabled>
+				<input class="form-control" value="gem install rails -v 4.2.2 --no-ri --no-rdoc" disabled>
+				<input class="form-control" value="rbenv rehash" disabled>
+				<input class="form-control" value="rails -v" disabled>
+				</div>
+				<!--Postgres Installation-->
+				<div class="postgres_setup" id="postgres_setup">
+					<h4>Postgres:</h4>
+					<input class="form-control" value="sudo  rpm -Uvh http://yum.postgresql.org/9.3/redhat/rhel-6-x86_64/pgdg-redhat93-9.3-1.noarch.rpm" disabled>
+					<input class="form-control" value="sudo yum install postgresql93-server postgresql93" disabled>
+					<input class="form-control" value="/etc/init.d/postgresql-9.3 initdb" disabled>
+					<p>Or</p>
+					<input class="form-control" value=" /usr/pgsql-9.3/bin/postgresql93-setup initdb" disabled>
+					<input class="form-control" value="sudo service postgresql-9.3 start" disabled>
+					<input class="form-control" value="sudo chkconfig postgresql-9.3 on" disabled>
+					<input class="form-control" value="su - postgres" disabled>
+					<input class="form-control" value="psql" disabled>
+					<input class="form-control" value="\password postgres" disabled>
+					<p>enter new password: “your new password” <br>
+					Retype your password: “retype your password”</p>
+					<input class="form-control" value="\q" disabled>
+					<input class="form-control" value="exit" disabled>
+					<input class="form-control" value="sudo vi vi /var/lib/pgsql/9.3/data/pg_hba.conf" disabled>
+					<p>Please change all host peer to trust or md5</p>
+					<p class="title">We need this packages to install the pg gem in rails.</p>
+					<input class="form-control" value="sudo yum install postgresql-devel" disabled>
+					<div class="links">
+				<p class="title">Please refer the following links for more info.</p>
+				<a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-centos-7">Postgres Installation</a>
+				<br>
+				<a href="https://wiki.postgresql.org/wiki/YUM_Installation">Postgres Installation</a>
+				<br>
+				<a href="http://www.postgresql.org/download/linux/redhat/">Postgres Installation</a>
+				<br>
+				<a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-a-centos-vps">Postgres Installation</a>
+				</div>
+				</div>
+
+			</div>
+			</div>
+			<div class="col-md-3">
+			<img src="images/anjan.jpg" alt="Smiley face" class="img-circle" height="300" width="150">
+			<h4>Anjan Kumar H.N</h4>
+			<p>Clik here for more info <a href="https://about.me/AnjanGowda" target="_blank">About Me</a></p>
+			<p>Follow me in</p>
+			<a href="https://in.linkedin.com/pub/anjan-gowda/b8/166/882" target="_blank">
+			<img src="images/social_icons_Linkedin.png" alt="linkedin" class="img-circle" height="50" width="50">
+			</a>
+			&nbsp;
+			&nbsp;
+			<a href="https://www.facebook.com/anjan.gowdamandya" target="_blank">
+			<img src="images/facebook.png" alt="facebook" class="img-circle" height="50" width="50">
+			</a>
+			&nbsp;
+			&nbsp;
+			<a href="https://twitter.com/aknagaraja" target="_blank">
+			<img src="images/twitter.png" alt="twitter" class="img-circle" height="50" width="50">
+			</a>
+		</div>
+		</div>
+		
+
+		<!-- start footer -->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<p>Copyright © 2015 Qwinix</p>
+				</div>
+			</div>
+		</footer>
+		<!-- end footer -->
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/wow.min.js"></script>
+		<script src="js/jquery.singlePageNav.min.js"></script>
+		<script src="js/custom.js"></script>
+</body>
+</html>
